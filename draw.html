@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="color-scheme" content="light">
+	<meta name="description" content="Pixelo 绘画使用教程：画笔、颜色、橡皮擦、取色器、移动画布、总览画布、颜色配置与网格开关的完整说明。">
+	<title>绘画 · 使用教程 | Pixelo</title>
+	<link rel="stylesheet" href="css/tech.css">
+</head>
+<body id="top">
+
+	<!-- 像素图案：全页复用，无需外部图片 -->
+	<svg class="svg-sprite" aria-hidden="true" focusable="false">
+		<symbol id="px-heart" viewBox="0 0 8 6">
+			<g fill="currentColor">
+				<rect x="1" y="0" width="2" height="1"/>
+				<rect x="5" y="0" width="2" height="1"/>
+				<rect x="0" y="1" width="8" height="1"/>
+				<rect x="0" y="2" width="8" height="1"/>
+				<rect x="1" y="3" width="6" height="1"/>
+				<rect x="2" y="4" width="4" height="1"/>
+				<rect x="3" y="5" width="2" height="1"/>
+				<rect x="1" y="1" width="1" height="1" opacity=".45"/>
+				<rect x="2" y="1" width="1" height="1" opacity=".45"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<a class="skip-link" href="#main">跳到正文</a>
+
+	<header class="topbar">
+		<div class="topbar__inner">
+			<span class="topbar__brand"><span class="topbar__mark" aria-hidden="true"></span>Pixelo<span class="topbar__brand-sub"> · 使用教程</span></span>
+			<nav class="topbar__nav" aria-label="页面目录">
+				<a href="#interface">界面</a>
+				<a href="#tools">工具栏</a>
+				<a href="#colors">颜色</a>
+				<a href="#grid">网格</a>
+				<a href="#faq">常见问题</a>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main">
+
+		<!-- ==================================================== Hero -->
+		<section class="hero" aria-labelledby="page-title">
+			<div class="hero__inner">
+				<p class="hero__eyebrow">PIXELO · 使用教程</p>
+				<h1 id="page-title">绘画</h1>
+				<p class="hero__lead">一支画笔、几块颜色，就能一格一格把图案拼出来。这里讲清楚工具栏每个按钮、颜色怎么调，以及网格的去留。</p>
+				<ul class="hero__chips">
+					<li>5 种工具</li>
+					<li>自动吸附格子</li>
+					<li>双指缩放</li>
+					<li>自动保存</li>
+				</ul>
+				<div class="hero__art" aria-hidden="true"><svg viewBox="0 0 8 6"><use href="#px-heart"/></svg></div>
+			</div>
+		</section>
+
+		<!-- ================================================ 01 认识界面 -->
+		<section class="section" id="interface" aria-labelledby="interface-title">
+			<div class="section__head">
+				<span class="section__kicker">01 / 界面</span>
+				<h2 id="interface-title">先认清这四块区域</h2>
+			</div>
+
+			<figure class="figure">
+				<div class="figure__stage">
+					<img src="img/draw-toolbar.png"
+						alt="Pixelo 绘画页：蓝色顶栏有返回、撤销、重做和「⋯」；中间是带网格的柴犬像素画；下方一排五个工具图标，最下面是黄、黑、白、粉四个色块，黄色带蓝色选中圆环。">
+				</div>
+				<figcaption>绘画页布局：顶栏 / 画布 / 工具栏 / 色板（实机截图）</figcaption>
+			</figure>
+
+			<div class="card card--spaced">
+				<ul class="checklist__list">
+					<li>
+						<div>
+							<strong>顶栏</strong>
+							<span>左侧返回；右侧是撤销、重做和「⋯」更多菜单。撤销重做按「一次完整落笔」算一步，灰色表示当前不可用。</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<strong>画布</strong>
+							<span>带浅灰网格的方形区域，默认显示网格。每一格就是一个像素，双指可以放大细看。</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<strong>工具栏</strong>
+							<span>一排 5 个图标，没有文字标签：画笔、橡皮擦、取色器、移动画布、总览画布。当前工具会高亮成黄色底。</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<strong>色板</strong>
+							<span>创建画布时选的那几种颜色，点一下换色；当前颜色带蓝色圆环。画笔按钮本身也会变成当前颜色。</span>
+						</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="callout callout--info">
+				<div class="callout__title"><span class="callout__icon"><span>i</span></span>每次进来都是这个状态</div>
+				<p>默认选中<strong>画笔</strong>、色板<strong>第一个颜色</strong>、<strong>网格显示</strong>。网格开关不会被记住，下次进入画布会重新打开。</p>
+			</div>
+		</section>
+
+		<!-- ================================================ 02 工具栏 -->
+		<section class="section" id="tools" aria-labelledby="tools-title">
+			<div class="section__head">
+				<span class="section__kicker">02 / 工具栏</span>
+				<h2 id="tools-title">五个工具，各管一件事</h2>
+			</div>
+			<p class="section__intro">从左到右点一下就切换，不需要长按或二级菜单。图标为示意，实际以 App 内显示为准。</p>
+
+			<div class="tool-grid">
+				<article class="tool-card">
+					<span class="tool-card__icon" aria-hidden="true">✎</span>
+					<div>
+						<h3>画笔 <small>默认工具</small></h3>
+						<p>单指点或拖动，格子立刻填上当前颜色。手指滑得快也会把中间经过的格子补齐，不会画出断线。</p>
+					</div>
+				</article>
+				<article class="tool-card">
+					<span class="tool-card__icon" aria-hidden="true">⌫</span>
+					<div>
+						<h3>橡皮擦</h3>
+						<p>同样用单指点或拖，把经过的格子擦成透明（空白格），方便修轮廓、留白。</p>
+					</div>
+				</article>
+				<article class="tool-card">
+					<span class="tool-card__icon" aria-hidden="true">◈</span>
+					<div>
+						<h3>取色器</h3>
+						<p>点画布上任意一格，吸取它的颜色并自动切回画笔，接着画同一种颜色。点到空白格会自动切成橡皮擦。</p>
+					</div>
+				</article>
+				<article class="tool-card">
+					<span class="tool-card__icon" aria-hidden="true">✥</span>
+					<div>
+						<h3>移动画布</h3>
+						<p>放大之后用单指拖动平移画布，去画没露出来的部分。画布移动会被限制在可视范围内，不会拖丢。</p>
+					</div>
+				</article>
+				<article class="tool-card">
+					<span class="tool-card__icon" aria-hidden="true">◎</span>
+					<div>
+						<h3>总览画布</h3>
+						<p>眼睛图标。一键缩回原始 1 倍并居中，重新看清整张画，网格也会跟着恢复——它不是一个弹窗预览。</p>
+					</div>
+				</article>
+				<article class="tool-card">
+					<span class="tool-card__icon" aria-hidden="true">●</span>
+					<div>
+						<h3>选择颜色</h3>
+						<p>工具栏下面那排圆点色块：点哪个就用哪个颜色，选中项带蓝色圆环。颜色不够用时，去「颜色配置」里加。</p>
+					</div>
+				</article>
+			</div>
+
+			<div class="callout callout--note">
+				<div class="callout__title"><span class="callout__icon"><span>!</span></span>两个和手势有关的细节</div>
+				<p>① 无论用哪个工具，<strong>双指捏合都能缩放画布</strong>（缩放时网格临时隐藏，松手恢复）；画布最小是 1 倍，不能缩到比原始尺寸更小，想复位就点「总览画布」。<br>② 落笔永远<strong>吸附到整数格</strong>，不会出现半格或自由笔迹，放大后点得更准。</p>
+			</div>
+		</section>
+
+		<!-- ================================================ 03 配置颜色 -->
+		<section class="section" id="colors" aria-labelledby="colors-title">
+			<div class="section__head">
+				<span class="section__kicker">03 / 颜色</span>
+				<h2 id="colors-title">配置颜色：和创建画布时是同一套</h2>
+			</div>
+			<p class="section__intro">在画布里点右上「⋯ → 颜色配置」，打开的就是<a href="create.html#colors">创建画布时选颜色</a>的那个页面：同样来自 221 个 MARD 色号，增删和排序方式完全一样。</p>
+
+			<figure class="figure">
+				<div class="figure__stage figure__stage--pair">
+					<img src="img/color-config-6.png" alt="「颜色配置」页：列出 H7、C5、C7、C8、C29、D3 六个色号及其十六进制色值，底部为「保存配置」。">
+					<img src="img/color-config-edit.png" alt="「颜色配置」编辑态：每行左侧有红色减号，右侧有拖拽排序手柄，右上角为勾。">
+				</div>
+				<figcaption>左：浏览已选颜色；右：编辑态可删除、拖动排序（实机截图）</figcaption>
+			</figure>
+
+			<div class="card card--spaced">
+				<ul class="checklist__list">
+					<li><div><strong>加颜色</strong><span>右上角 <strong>＋</strong> 打开「选择颜色」页，按 A–M 分组挑色号，可多选，点「确认」。</span></div></li>
+					<li><div><strong>删颜色 / 换顺序</strong><span>点右上角滑块图标进入编辑态，左侧红色「−」删除，右侧三横线把手拖动排序，再点「✓」退出编辑态。</span></div></li>
+					<li><div><strong>改名字</strong><span>长按某一行，在「编辑」里改「色号名称」并「保存」；「色值」是只读的，不能自定义颜色。</span></div></li>
+					<li><div><strong>保存配置</strong><span>点底部「保存配置」后返回画布，底部色板立刻换成新的颜色集，当前颜色会回到第一个。</span></div></li>
+				</ul>
+			</div>
+
+			<div class="callout callout--tip">
+				<div class="callout__title"><span class="callout__icon"><span>✓</span></span>已经画好的像素不会变</div>
+				<p>「颜色配置」换的是<strong>调色板</strong>，不会把已经落在画布上的颜色批量替换，也不会重绘导入的图片。删掉某个正在用的色号，画布上原有的那些格子仍然保持原色。</p>
+			</div>
+		</section>
+
+		<!-- ================================================ 04 网格与菜单 -->
+		<section class="section" id="grid" aria-labelledby="grid-title">
+			<div class="section__head">
+				<span class="section__kicker">04 / 网格</span>
+				<h2 id="grid-title">网格开关，和「⋯」里的全部菜单</h2>
+			</div>
+			<p class="section__intro">右上角的「⋯」是画布页的功能总入口，一共 5 项，顺序固定。</p>
+
+			<figure class="figure">
+				<div class="figure__stage">
+					<img src="img/draw-menu.png"
+						alt="绘画页右上角「⋯」菜单展开，深色菜单依次为「颜色配置」「开启联网」「隐藏网格」「导出图片」「导出图纸」，背景是柴犬像素画。">
+				</div>
+				<figcaption>「⋯」菜单的 5 个选项（实机截图）</figcaption>
+			</figure>
+
+			<div class="card card--spaced">
+				<ul class="checklist__list">
+					<li><div><strong>颜色配置</strong><span>调整这张画布的调色板，见上一节。</span></div></li>
+					<li><div><strong>开启联网</strong><span>和另一台设备一起画同一张画布，见<a href="connect.html">联网绘画教程</a>。</span></div></li>
+					<li><div><strong>隐藏网格 / 显示网格</strong><span>切换辅助网格。当前显示时写着「隐藏网格」，隐藏后会变成「显示网格」。</span></div></li>
+					<li><div><strong>导出图片</strong><span>把画导出成纯像素图片，不消耗额度，见<a href="export.html#image">导出图片教程</a>。</span></div></li>
+					<li><div><strong>导出图纸</strong><span>生成带色号和坐标的拼豆图纸，会消耗导出额度。</span></div></li>
+				</ul>
+			</div>
+
+			<div class="callout callout--info">
+				<div class="callout__title"><span class="callout__icon"><span>i</span></span>网格只是给你看的</div>
+				<p>网格会随缩放自动变疏或变密，保证放大后每格之间还看得清；<strong>它不会出现在导出的图片里</strong>。关掉网格后看图更干净，但下次进入画布又会默认打开（这个开关目前不会被记住）。</p>
+			</div>
+
+			<div class="callout callout--note">
+				<div class="callout__title"><span class="callout__icon"><span>!</span></span>关于撤销、重做和保存</div>
+				<p>顶栏的撤销 / 重做以「从按下到抬手的一整笔」为单位；一旦落了新的一笔，之前的重做记录就清空了。落笔、撤销、移动画布等操作都会<strong>自动保存</strong>，不用手动存，也不必担心返回首页丢稿。</p>
+			</div>
+		</section>
+
+		<!-- ================================================ 05 常见问题 -->
+		<section class="section" id="faq" aria-labelledby="faq-title">
+			<div class="section__head">
+				<span class="section__kicker">05 / 常见问题</span>
+				<h2 id="faq-title">画着画着遇到问题？</h2>
+			</div>
+
+			<div class="faq">
+				<details>
+					<summary>点了画布，颜色就是上不去</summary>
+					<div class="faq__answer">
+						<p>先确认工具栏最左边的<strong>画笔</strong>是黄色高亮状态——选成「移动画布」时单指只会平移，选「取色器」只会取色。再检查是不是选了和底色一样的颜色。格子很密时，双指放大后再点会更准。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>取色器点了一下，工具自己变了</summary>
+					<div class="faq__answer">
+						<p>这是设计好的：取到有颜色的格子会切回画笔，方便接着画；取到<strong>空白格</strong>会切成橡皮擦。想换回别的工具，手动点一下工具栏即可。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>画布放大后找不到回全图的按钮</summary>
+					<div class="faq__answer">
+						<p>工具栏最右边的<strong>眼睛</strong>就是「总览画布」：一键回到 1 倍并居中。双指捏合也只能缩到 1 倍，不能更小。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>关掉网格，下次进来又自动开了</summary>
+					<div class="faq__answer">
+						<p>网格默认显示，每次进入画布都会重置。需要无网格的成品图不用担心——导出图片本身就不含网格。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>改了颜色配置，之前画的颜色怎么没变？</summary>
+					<div class="faq__answer">
+						<p>颜色配置只更换调色板，不会重绘已有像素。要改旧区域的颜色，选中新颜色用画笔重新涂一遍；整片同色区域用取色器配合放大镜更省力。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>能不能自定义一个色号里没有的颜色？</summary>
+					<div class="faq__answer">
+						<p>目前不能。颜色只能从内置的 221 个 MARD 色号里挑，色值只读，仅「色号名称」可以长按修改。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>画到一半退出，作品会丢吗？</summary>
+					<div class="faq__answer">
+						<p>不会。创建时画板就已入库，之后落笔、橡皮、撤销重做、移动画布都会自动保存；返回首页会看到最新缩略图。</p>
+					</div>
+				</details>
+			</div>
+		</section>
+
+		<!-- ==================================================== 收尾 -->
+		<section class="ending" aria-label="小结">
+			<div class="ending__card">
+				<h2>画完了，就把它带出去</h2>
+				<p>画笔落格 → 取色修细节 → 总览看全图。<br>下一步看<a href="export.html">导出图片教程</a>，把作品存进相册或做成拼豆图纸。</p>
+			</div>
+		</section>
+	</main>
+
+	<nav class="tutorial-nav" aria-label="其他使用教程">
+		<div class="tutorial-nav__inner">
+			<p class="tutorial-nav__label">PIXELO 使用教程</p>
+			<div class="tutorial-nav__links">
+				<a href="create.html">创建画布</a>
+				<a class="is-current" href="draw.html" aria-current="page">绘画</a>
+				<a href="export.html">导出图片</a>
+				<a href="connect.html">联网绘画</a>
+			</div>
+		</div>
+	</nav>
+
+	<footer class="footer">
+		<p>Pixelo · 绘画使用教程 · 2026 年 11 月</p>
+		<p>适用 iOS 版 · <a href="#top">回到顶部</a></p>
+	</footer>
+
+</body>
+</html>

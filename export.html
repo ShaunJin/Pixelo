@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="color-scheme" content="light">
+	<meta name="description" content="Pixelo 导出图片使用教程：右上角更多菜单、导出图片不扣额度、导出图纸的分块与整体模式、导出额度与解锁、PDF 与图片的保存位置。">
+	<title>导出图片 · 使用教程 | Pixelo</title>
+	<link rel="stylesheet" href="css/tech.css">
+</head>
+<body id="top">
+
+	<!-- 像素图案：全页复用，无需外部图片 -->
+	<svg class="svg-sprite" aria-hidden="true" focusable="false">
+		<symbol id="px-heart" viewBox="0 0 8 6">
+			<g fill="currentColor">
+				<rect x="1" y="0" width="2" height="1"/>
+				<rect x="5" y="0" width="2" height="1"/>
+				<rect x="0" y="1" width="8" height="1"/>
+				<rect x="0" y="2" width="8" height="1"/>
+				<rect x="1" y="3" width="6" height="1"/>
+				<rect x="2" y="4" width="4" height="1"/>
+				<rect x="3" y="5" width="2" height="1"/>
+				<rect x="1" y="1" width="1" height="1" opacity=".45"/>
+				<rect x="2" y="1" width="1" height="1" opacity=".45"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<a class="skip-link" href="#main">跳到正文</a>
+
+	<header class="topbar">
+		<div class="topbar__inner">
+			<span class="topbar__brand"><span class="topbar__mark" aria-hidden="true"></span>Pixelo<span class="topbar__brand-sub"> · 使用教程</span></span>
+			<nav class="topbar__nav" aria-label="页面目录">
+				<a href="#entry">入口</a>
+				<a href="#image">导出图片</a>
+				<a href="#quota">额度</a>
+				<a href="#mode">分块 / 整体</a>
+				<a href="#result">结果在哪</a>
+				<a href="#faq">常见问题</a>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main">
+
+		<!-- ==================================================== Hero -->
+		<section class="hero" aria-labelledby="page-title">
+			<div class="hero__inner">
+				<p class="hero__eyebrow">PIXELO · 使用教程</p>
+				<h1 id="page-title">导出图片</h1>
+				<p class="hero__lead">画完了，从画布右上角的「⋯」就能把作品带出去：存一张干净的像素图，或做成带色号、能照着拼的图纸。</p>
+				<ul class="hero__chips">
+					<li>图片免额度</li>
+					<li>图纸每次 −1</li>
+					<li>PDF / 相册</li>
+					<li>分块 / 整体</li>
+				</ul>
+				<div class="hero__art" aria-hidden="true"><svg viewBox="0 0 8 6"><use href="#px-heart"/></svg></div>
+			</div>
+		</section>
+
+		<!-- ================================================ 01 入口 -->
+		<section class="section" id="entry" aria-labelledby="entry-title">
+			<div class="section__head">
+				<span class="section__kicker">01 / 入口</span>
+				<h2 id="entry-title">入口在绘画页右上角</h2>
+			</div>
+			<p class="section__intro">先打开要导出的那张画布，点右上角「⋯」，在菜单里选「导出图片」或「导出图纸」。这是两条完全不同的路径，别选错。</p>
+
+			<figure class="figure">
+				<div class="figure__stage">
+					<img src="img/draw-menu.png"
+						alt="绘画页右上角「⋯」菜单展开，依次是「颜色配置」「开启联网」「隐藏网格」「导出图片」「导出图纸」。">
+				</div>
+				<figcaption>画布页右上「⋯」菜单最下面两项就是导出（实机截图）</figcaption>
+			</figure>
+
+			<div class="compare compare--spaced">
+				<article class="compare__item">
+					<h3>导出图片 → 一张干净的成品图</h3>
+					<p>把画布按格放大成 PNG，空格透明、不带网格和色号。</p>
+					<ul>
+						<li><strong>不消耗任何额度</strong>，次数不限</li>
+						<li>直接存进系统相册</li>
+					</ul>
+				</article>
+				<article class="compare__item">
+					<h3>导出图纸 → 可以照着拼的图纸</h3>
+					<p>每格写色号，配坐标、辅助线和颜色总览，适合拼豆。</p>
+					<ul>
+						<li>每次成功导出<strong>消耗 1 次额度</strong></li>
+						<li>可选 PDF 或图片，可分块或整张</li>
+					</ul>
+				</article>
+			</div>
+
+			<div class="callout callout--tip">
+				<div class="callout__title"><span class="callout__icon"><span>✓</span></span>一句话选对</div>
+				<p>想发朋友圈、当头像、存作品 → <strong>导出图片</strong>；想买豆子照着颜色拼 → <strong>导出图纸</strong>。</p>
+			</div>
+		</section>
+
+		<!-- ================================================ 02 导出图片 -->
+		<section class="section" id="image" aria-labelledby="image-title">
+			<div class="section__head">
+				<span class="section__kicker">02 / 导出图片</span>
+				<h2 id="image-title">导出图片：不扣额度，直接进相册</h2>
+			</div>
+
+			<ol class="steps">
+				<li class="step">
+					<div class="step__marker" aria-hidden="true">1</div>
+					<div class="step__body">
+						<h3>设置「步长」，决定图片有多大</h3>
+						<p>点「导出图片」会弹出参数面板：<strong>步长</strong>就是每个格子放大成多少像素。滑块范围 4–32，默认 4；面板会实时算出「输出尺寸 W × H px」。</p>
+
+						<figure class="figure">
+							<div class="figure__stage">
+								<div class="export-sheet" aria-hidden="true">
+									<div class="export-sheet__title">导出图片</div>
+									<p class="export-sheet__hint">设置每个格子的像素边长</p>
+									<div class="export-sheet__row"><span>步长</span><strong>4 px</strong></div>
+									<div class="export-sheet__track"><span class="export-sheet__knob"></span></div>
+									<div class="export-sheet__scale"><span>4</span><span>32</span></div>
+									<div class="export-sheet__out"><span>输出尺寸</span><strong>256 × 256 px</strong></div>
+									<div class="export-sheet__btn">导出并保存</div>
+								</div>
+							</div>
+							<figcaption>参数面板示意（纯 CSS 绘制，非实机截图）；实际文案以 App 内为准</figcaption>
+						</figure>
+
+						<p class="text-spaced">输出边长 = 画布格数 × 步长。例如 <strong>64 × 64</strong> 的画布、步长 <strong>4</strong>，得到 <strong>256 × 256 px</strong> 的图片。</p>
+					</div>
+				</li>
+
+				<li class="step">
+					<div class="step__marker" aria-hidden="true">2</div>
+					<div class="step__body">
+						<h3>点「导出并保存」，去相册里看</h3>
+						<p>生成时显示「正在生成图片…」，成功后提示「已保存到相册」。打开系统「照片」App 就能找到，可以再自行分享、设为壁纸或发给朋友。</p>
+
+						<div class="callout callout--info">
+							<div class="callout__title"><span class="callout__icon"><span>i</span></span>导出的图片长什么样</div>
+							<p>只有像素本身：<strong>不含网格、坐标、色号和颜色总览</strong>；没画过的空格子是<strong>透明</strong>的（不是白底）。这一路不弹分享面板，也不会生成 PDF。</p>
+						</div>
+					</div>
+				</li>
+			</ol>
+
+			<div class="specs">
+				<dl>
+					<div><dt>步长范围</dt><dd>4 – 32 px</dd></div>
+					<div><dt>默认步长</dt><dd>4 px</dd></div>
+					<div><dt>单边上限</dt><dd>8192 px</dd></div>
+					<div><dt>总像素上限</dt><dd>20,000,000 px</dd></div>
+					<div><dt>额度消耗</dt><dd class="is-plain">0 次（完全免费、不限次）</dd></div>
+				</dl>
+			</div>
+
+			<div class="callout callout--note">
+				<div class="callout__title"><span class="callout__icon"><span>!</span></span>图片太大，按钮点不了？</div>
+				<p>尺寸偏大时会提示「尺寸较大，生成时间会变长」；单边超过 8192 px 或总像素超过 2000 万，会提示「尺寸超出上限，请降低步长」并禁用导出按钮，把步长调小再试。首次保存若弹出「无法保存到相册」，按提示去系统设置允许 Pixelo <strong>添加照片</strong>即可。</p>
+			</div>
+		</section>
+
+		<!-- ================================================ 03 额度 -->
+		<section class="section" id="quota" aria-labelledby="quota-title">
+			<div class="section__head">
+				<span class="section__kicker">03 / 额度</span>
+				<h2 id="quota-title">导出图纸要用到「导出额度」</h2>
+			</div>
+			<p class="section__intro"><strong>只有「导出图纸」会消耗额度</strong>，导出图片不占次数。第一次安装会赠送 10 次。</p>
+
+			<div class="card">
+				<ul class="checklist__list">
+					<li><div><strong>每次成功导出图纸消耗 1 次</strong><span>整体导出、分块导出都算一次；生成失败、写入失败不会扣，成功后才扣。</span></div></li>
+					<li><div><strong>查看剩余次数</strong><span>首页右上「⋯」→ 设置 → 「导出次数」这一行；解锁后显示「无限」。</span></div></li>
+					<li><div><strong>次数用完时</strong><span>点「导出图纸」会弹「导出额度已用完 / 导出次数已用完，可以解锁导出或购买单次导出。」，并给出两个按钮。</span></div></li>
+				</ul>
+			</div>
+
+			<figure class="figure">
+				<div class="figure__stage">
+					<img src="img/home-menu.png"
+						alt="Pixelo 首页右上「⋯」菜单展开，菜单里有「联网绘画」和「设置」两项，页面底部是「新建画布」。">
+				</div>
+				<figcaption>首页「⋯」菜单里的「设置」，进去可查看导出次数（实机截图）</figcaption>
+			</figure>
+
+			<div class="compare compare--spaced">
+				<article class="compare__item">
+					<h3>增加一次导出</h3>
+					<p>「购买后额外获得 1 次导出额度」，买完提示「已增加 1 次导出」，适合偶尔导一次。</p>
+				</article>
+				<article class="compare__item">
+					<h3>解锁导出（不限次数）<span class="badge">推荐</span></h3>
+					<p>「一次性买断，之后导出不再受次数限制」，解锁后提示「已解锁导出」，设置里显示「无限」。</p>
+				</article>
+			</div>
+
+			<div class="callout callout--info">
+				<div class="callout__title"><span class="callout__icon"><span>i</span></span>关于购买页</div>
+				<p>两个入口都会打开标题为「获取导出额度」的页面，大标题「解锁无限导出」，可选「增加一次导出」或「解锁导出」，并有「恢复购买」。价格以 App Store 当前显示为准；权益与 Apple ID 绑定，换设备后用同一 Apple ID「恢复购买」即可。已解锁状态下再点导出次数，会提示「已解锁无限次导出功能」。</p>
+			</div>
+		</section>
+
+		<!-- ================================================ 04 分块 / 整体 -->
+		<section class="section" id="mode" aria-labelledby="mode-title">
+			<div class="section__head">
+				<span class="section__kicker">04 / 分块 / 整体</span>
+				<h2 id="mode-title">图纸要整张，还是切成几块</h2>
+			</div>
+			<p class="section__intro">点「导出图纸」并通过额度检查后，App 会按画布大小决定下一步：<strong>宽度不超过 52 格直接整张导出</strong>，更大的画布会先问你一次。</p>
+
+			<figure class="figure">
+				<div class="figure__stage">
+					<img src="img/export-way.png"
+						alt="画布上弹出「希望以哪种方式导出?」对话框，两个按钮为「分块导出」和「整体导出」。">
+				</div>
+				<figcaption>大画布会先弹出「希望以哪种方式导出?」（实机截图）</figcaption>
+			</figure>
+
+			<div class="compare compare--spaced">
+				<article class="compare__item">
+					<h3>整体导出</h3>
+					<p>生成<strong>一张完整图纸图片</strong>，直接存进相册，提示「已保存到相册」，消耗 1 次额度。</p>
+					<ul><li>不用进设置页，也没有 PDF 选项</li><li>画布很大时，一张图上的色号会偏小</li></ul>
+				</article>
+				<article class="compare__item">
+					<h3>分块导出</h3>
+					<p>进入标题为「导出」的设置页，先定分块大小和导出类型，再点「确认导出」。</p>
+					<ul><li>可选 <strong>PDF</strong> 或 <strong>图片</strong>（默认 PDF）</li><li>每块单独一页 / 一张，色号看得清</li></ul>
+				</article>
+			</div>
+
+			<h3 class="subhead">「导出」页的两个设置</h3>
+			<figure class="figure">
+				<div class="figure__stage">
+					<img src="img/export-settings.png"
+						alt="「导出」设置页：分块大小 52 × 52（2 行 2 列），导出类型 PDF，中间弹出 PDF / 图片 选择框，底部是「确认导出」按钮。">
+				</div>
+				<figcaption>「导出」页：分块大小、导出类型与「确认导出」（实机截图）</figcaption>
+			</figure>
+
+			<div class="card card--spaced">
+				<ul class="checklist__list">
+					<li><div><strong>分块大小</strong><span>预设 52 / 78 / 104，也可选「自定义分块大小」输入任意正整数。行里会显示切成几行几列，例如 <code>52 × 52（2 行 2 列）</code>。</span></div></li>
+					<li><div><strong>导出类型</strong><span>点开可选 <code>PDF</code> 或 <code>图片</code>，默认 PDF。</span></div></li>
+					<li><div><strong>确认导出</strong><span>点这一下会再检查一次额度，然后开始生成。</span></div></li>
+				</ul>
+			</div>
+
+			<div class="flow flow--spaced">
+				<div class="flow__item">
+					<span class="flow__num">01 / 切块</span>
+					<h3>按行优先</h3>
+					<p>从左上角开始，一行一行往右切；边缘不够一块时按实际剩余格数算，不会留空页。</p>
+				</div>
+				<div class="flow__item">
+					<span class="flow__num">02 / 编码</span>
+					<h3>每块有位置编号</h3>
+					<p>页眉标「第R行第C列（共M行N列）」；切成 1 块时不显示编号。</p>
+				</div>
+				<div class="flow__item">
+					<span class="flow__num">03 / 标注</span>
+					<h3>照着拼就行</h3>
+					<p>格内写色号，四周标全局坐标，每 10 格一条橙色虚线，底部附颜色总览和每种颜色的数量。</p>
+				</div>
+			</div>
+
+			<div class="callout callout--tip">
+				<div class="callout__title"><span class="callout__icon"><span>✓</span></span>只想要一页 PDF？</div>
+				<p>选「分块导出」，把「分块大小」自定义成不小于画布边长的数值，整张画就只会被切成 1 页，导出类型选 PDF 即可。</p>
+			</div>
+		</section>
+
+		<!-- ================================================ 05 结果在哪 -->
+		<section class="section" id="result" aria-labelledby="result-title">
+			<div class="section__head">
+				<span class="section__kicker">05 / 结果在哪</span>
+				<h2 id="result-title">PDF 和图片，去不同的地方找</h2>
+			</div>
+
+			<div class="compare">
+				<article class="compare__item">
+					<h3>选「图片」→ 系统相册</h3>
+					<p>逐张写入相册，完成后提示「已保存 N 张到相册」。导出图片、整体导出也都在相册里看。</p>
+					<ul><li>打开「照片」App，在最近项目里找</li><li>不会出现在 App 内的「导出文件」列表里</li></ul>
+				</article>
+				<article class="compare__item">
+					<h3>选「PDF」→ App 内「导出文件」</h3>
+					<p>所有分块合成<strong>一个 PDF</strong>，提示「PDF 已生成」，并立即弹出系统分享面板，可以顺手存到「文件」或发给别人。</p>
+					<ul><li>App 内也留了一份，可随时预览 / 分享 / 删除</li><li>也能用「文件」App 访问 Pixelo 的文档目录</li></ul>
+				</article>
+			</div>
+
+			<figure class="figure">
+				<div class="figure__stage">
+					<img src="img/export-files.png" alt="「导出文件」页面，空状态居中显示「暂无导出文件」。">
+				</div>
+				<figcaption>「导出文件」列表：生成过 PDF 后会按时间倒序列出（实机截图）</figcaption>
+			</figure>
+
+			<div class="callout callout--note">
+				<div class="callout__title"><span class="callout__icon"><span>!</span></span>「导出文件」藏在设置里</div>
+				<p>确切路径是 <strong>首页 → 右上「⋯」→ 设置 → 导出文件</strong>。首页「⋯」菜单只有「联网绘画」和「设置」两项，没有直达「导出文件」。列表里可以点开预览，也可以用右侧按钮分享或删除；还空着时会显示「暂无导出文件」。</p>
+			</div>
+		</section>
+
+		<!-- ================================================ 06 常见问题 -->
+		<section class="section" id="faq" aria-labelledby="faq-title">
+			<div class="section__head">
+				<span class="section__kicker">06 / 常见问题</span>
+				<h2 id="faq-title">导出相关问题</h2>
+			</div>
+
+			<div class="faq">
+				<details>
+					<summary>「导出图片」会扣我的导出次数吗？</summary>
+					<div class="faq__answer">
+						<p>不会，一次都不扣，也没有次数限制。只有「导出图纸」（含整体导出、分块导出）才消耗额度。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>点「导出图纸」弹出了购买页</summary>
+					<div class="faq__answer">
+						<p>说明额度已用完。可以「增加一次导出」买单次，或「解锁导出（不限次数）」一次性买断。到<strong>首页 → ⋯ → 设置 → 导出次数</strong>能看剩余次数。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>为什么没让我选「分块 / 整体」，直接就导出了？</summary>
+					<div class="faq__answer">
+						<p>画布宽度<strong>不超过 52 格</strong>时，App 直接按整张导出，不弹选择框；只有更大的画布才会问你一次。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>「整体导出」能出 PDF 吗？</summary>
+					<div class="faq__answer">
+						<p>不能，整体导出只生成一张图片并存入相册。需要 PDF 就选「分块导出」，导出类型选 PDF；若只想出一页，把自定义分块大小设成不小于画布边长即可。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>刚生成的 PDF 去哪了？</summary>
+					<div class="faq__answer">
+						<p>生成后会立刻弹系统分享，可以先存到「文件」App。App 内也保留一份：<strong>首页 → ⋯ → 设置 → 导出文件</strong>，列表里能预览、分享、删除。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>选了「图片」，为什么「导出文件」里是空的？</summary>
+					<div class="faq__answer">
+						<p>「导出文件」只收录 PDF。图片、整体导出、以及不扣额度的「导出图片」都只写入<strong>系统相册</strong>，请到「照片」App 查看。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>导出中途失败了，会白扣一次吗？</summary>
+					<div class="faq__answer">
+						<p>不会。图片要确认写进相册、PDF 要确认写入文件之后才扣次数；生成或保存失败会提示「导出失败」并保留额度，可以重试。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>图纸上的小字和虚线是什么？</summary>
+					<div class="faq__answer">
+						<p>每个格子里是对应的<strong>色号</strong>（如 A3），四周的数字是<strong>全局坐标</strong>，每 10 格有一条橙色虚线方便数格；页眉的「第R行第C列（共M行N列）」标明这块在整张画里的位置，底部还有<strong>颜色总览</strong>和每种颜色要用多少颗。</p>
+					</div>
+				</details>
+			</div>
+		</section>
+
+		<!-- ==================================================== 收尾 -->
+		<section class="ending" aria-label="小结">
+			<div class="ending__card">
+				<h2>把作品带出去吧</h2>
+				<p>成品图 → 导出图片，去相册；拼豆图纸 → 导出图纸，PDF 在「导出文件」。<br>还没画完？回<a href="draw.html">绘画教程</a>继续。</p>
+			</div>
+		</section>
+	</main>
+
+	<nav class="tutorial-nav" aria-label="其他使用教程">
+		<div class="tutorial-nav__inner">
+			<p class="tutorial-nav__label">PIXELO 使用教程</p>
+			<div class="tutorial-nav__links">
+				<a href="create.html">创建画布</a>
+				<a href="draw.html">绘画</a>
+				<a class="is-current" href="export.html" aria-current="page">导出图片</a>
+				<a href="connect.html">联网绘画</a>
+			</div>
+		</div>
+	</nav>
+
+	<footer class="footer">
+		<p>Pixelo · 导出图片使用教程 · 2026 年 11 月</p>
+		<p>适用 iOS 版 · <a href="#top">回到顶部</a></p>
+	</footer>
+
+</body>
+</html>

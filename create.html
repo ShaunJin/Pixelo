@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="color-scheme" content="light">
+	<meta name="description" content="Pixelo 创建画布使用教程：选择画布尺寸与 MARD 颜色集，还可以导入照片，按所选分辨率和颜色自动生成像素底稿。">
+	<title>创建画布 · 使用教程 | Pixelo</title>
+	<link rel="stylesheet" href="css/tech.css">
+</head>
+<body id="top">
+
+	<!-- 像素图案：全页复用，无需外部图片 -->
+	<svg class="svg-sprite" aria-hidden="true" focusable="false">
+		<symbol id="px-heart" viewBox="0 0 8 6">
+			<g fill="currentColor">
+				<rect x="1" y="0" width="2" height="1"/>
+				<rect x="5" y="0" width="2" height="1"/>
+				<rect x="0" y="1" width="8" height="1"/>
+				<rect x="0" y="2" width="8" height="1"/>
+				<rect x="1" y="3" width="6" height="1"/>
+				<rect x="2" y="4" width="4" height="1"/>
+				<rect x="3" y="5" width="2" height="1"/>
+				<rect x="1" y="1" width="1" height="1" opacity=".45"/>
+				<rect x="2" y="1" width="1" height="1" opacity=".45"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<a class="skip-link" href="#main">跳到正文</a>
+
+	<header class="topbar">
+		<div class="topbar__inner">
+			<span class="topbar__brand"><span class="topbar__mark" aria-hidden="true"></span>Pixelo<span class="topbar__brand-sub"> · 使用教程</span></span>
+			<nav class="topbar__nav" aria-label="页面目录">
+				<a href="#start">入口</a>
+				<a href="#size">尺寸</a>
+				<a href="#colors">颜色</a>
+				<a href="#import">导入图片</a>
+				<a href="#faq">常见问题</a>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main">
+
+		<!-- ==================================================== Hero -->
+		<section class="hero" aria-labelledby="page-title">
+			<div class="hero__inner">
+				<p class="hero__eyebrow">PIXELO · 使用教程</p>
+				<h1 id="page-title">创建画布</h1>
+				<p class="hero__lead">选好尺寸和颜色，就能开始画。也可以挑一张照片，让 App 按你选的分辨率和颜色先打好像素底稿。</p>
+				<ul class="hero__chips">
+					<li>13 种尺寸</li>
+					<li>221 个色号</li>
+					<li>照片转像素</li>
+					<li>创建即保存</li>
+				</ul>
+				<div class="hero__art" aria-hidden="true"><svg viewBox="0 0 8 6"><use href="#px-heart"/></svg></div>
+			</div>
+		</section>
+
+		<!-- ================================================ 01 入口 -->
+		<section class="section" id="start" aria-labelledby="start-title">
+			<div class="section__head">
+				<span class="section__kicker">01 / 入口</span>
+				<h2 id="start-title">从首页新建</h2>
+			</div>
+
+			<ol class="steps">
+				<li class="step">
+					<div class="step__marker" aria-hidden="true">1</div>
+					<div class="step__body">
+						<h3>点首页底部的「新建画布」</h3>
+						<p>首页是作品列表，已有的画布按三列缩略图排列。底部蓝色按钮就是入口，点一下进入标题为「新画布」的设置页。</p>
+
+						<figure class="figure">
+							<div class="figure__stage">
+								<img src="img/home-gallery.png"
+									alt="Pixelo 首页截图：三列作品缩略图，底部是蓝色的「新建画布」按钮，左上角有「编辑」。">
+							</div>
+							<figcaption>首页底部的「新建画布」（实机截图）</figcaption>
+						</figure>
+					</div>
+				</li>
+
+				<li class="step">
+					<div class="step__marker" aria-hidden="true">2</div>
+					<div class="step__body">
+						<h3>认识「新画布」页的三行设置</h3>
+						<p>从上到下依次是<strong>画布尺寸</strong>、<strong>颜色集</strong>、<strong>导入图片</strong>。左上角「取消」可退出，最下方蓝色按钮是「创建画布」。</p>
+
+						<figure class="figure">
+							<div class="figure__stage">
+								<img src="img/new-canvas-empty.png"
+									alt="「新画布」页初始状态：画布尺寸 64×64，颜色集显示「请选择颜色」，下方是「导入图片」，底部为「创建画布」按钮。">
+							</div>
+							<figcaption>「新画布」页：尺寸已默认 64×64，颜色集尚未选择（实机截图）</figcaption>
+						</figure>
+
+						<div class="card card--spaced">
+							<ul class="checklist__list">
+								<li>
+									<div>
+										<strong>画布尺寸 <em>· 必选，已有默认值</em></strong>
+										<span>决定整张画有多少格，默认 64×64。</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<strong>颜色集 <em>· 必选，至少 1 种</em></strong>
+										<span>挑出这张画要用的颜色，之后就是绘画页底部的色板。</span>
+									</div>
+								</li>
+								<li>
+									<div>
+										<strong>导入图片 <em>· 可跳过</em></strong>
+										<span>不选就是一张空白画布，从零开始画。</span>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+			</ol>
+		</section>
+
+		<!-- ================================================ 02 尺寸 -->
+		<section class="section" id="size" aria-labelledby="size-title">
+			<div class="section__head">
+				<span class="section__kicker">02 / 尺寸</span>
+				<h2 id="size-title">先定画布尺寸</h2>
+			</div>
+			<p class="section__intro">尺寸就是「横竖各多少格」。格子越多越能画细节，但点起来也越费眼。<strong>目前没有修改画布尺寸的入口，创建前先想好。</strong></p>
+
+			<div class="card">
+				<p class="card__hint">可选的 13 种正方形尺寸（蓝色为默认）：</p>
+				<ul class="tag-list">
+					<li>16 × 16</li>
+					<li>32 × 32</li>
+					<li>48 × 48</li>
+					<li>52 × 52</li>
+					<li class="is-default">64 × 64 · 默认</li>
+					<li>96 × 96</li>
+					<li>104 × 104</li>
+					<li>128 × 128</li>
+					<li>192 × 192</li>
+					<li>208 × 208</li>
+					<li>256 × 256</li>
+					<li>512 × 512</li>
+					<li>1024 × 1024</li>
+				</ul>
+			</div>
+
+			<figure class="figure">
+				<div class="figure__stage">
+					<img src="img/size-options.png"
+						alt="「新画布」页上弹出的画布尺寸列表，可见 16 × 16、32 × 32、48 × 48、52 × 52、64 × 64、96 × 96、104 × 104 等选项。">
+				</div>
+				<figcaption>点「画布尺寸」弹出尺寸列表，上下滑动可看到更大的尺寸（实机截图）</figcaption>
+			</figure>
+
+			<div class="specs">
+				<dl>
+					<div><dt>默认尺寸</dt><dd>64 × 64</dd></div>
+					<div><dt>最大尺寸</dt><dd>1024 × 1024</dd></div>
+					<div><dt>形状</dt><dd class="is-plain">正方形，N × N 格</dd></div>
+					<div><dt>自定义输入</dt><dd class="is-plain">不支持，只能从列表里选</dd></div>
+				</dl>
+			</div>
+
+			<div class="callout callout--tip">
+				<div class="callout__title"><span class="callout__icon"><span>✓</span></span>怎么选比较顺手</div>
+				<p>第一次玩建议 <strong>16 × 16</strong> 或 <strong>32 × 32</strong>，画个小图标很快有成就感；<strong>64 × 64</strong> 适合完整的头像、小动物。想导入照片，尺寸越大细节越保留。</p>
+			</div>
+			<div class="callout callout--note">
+				<div class="callout__title"><span class="callout__icon"><span>!</span></span>尺寸还影响后面两件事</div>
+				<p>一是导入图片会被压缩成这么多格；二是画布宽超过 52 格时，导出图纸会多一步「分块 / 整体」的选择。详见<a href="export.html#mode">导出图片教程</a>。</p>
+			</div>
+		</section>
+
+		<!-- ================================================ 03 颜色 -->
+		<section class="section" id="colors" aria-labelledby="colors-title">
+			<div class="section__head">
+				<span class="section__kicker">03 / 颜色</span>
+				<h2 id="colors-title">选出这张画要用的颜色</h2>
+			</div>
+			<p class="section__intro">这里选的<strong>就是整张画的调色板</strong>：创建后它们会原样出现在绘画页底部，随时点着换色。</p>
+
+			<ol class="steps">
+				<li class="step">
+					<div class="step__marker" aria-hidden="true">1</div>
+					<div class="step__body">
+						<h3>点「颜色集」挑色号</h3>
+						<p>第一次进入会自动打开「选择颜色」页：左侧按 <strong>A / B / C / D / E / F / G / H / M</strong> 分组，右侧是一格格的色卡，标着色号如 <code>A1</code>、<code>A7</code>。点一下出现黑色 ✓，可以多选，选完点右上「确认」。</p>
+
+						<figure class="figure">
+							<div class="figure__stage figure__stage--pair">
+								<img src="img/color-select.png" alt="「选择颜色」页：左侧 A 到 M 的分组字母，右侧排列着 A1 到 A12 等色卡，尚未选中。">
+								<img src="img/color-select-checked.png" alt="「选择颜色」页：A1 色卡右侧出现黑色圆形勾选标记，表示已选中。">
+							</div>
+							<figcaption>左：按分组浏览色号；右：点选后色卡出现 ✓（实机截图）</figcaption>
+						</figure>
+					</div>
+				</li>
+
+				<li class="step">
+					<div class="step__marker" aria-hidden="true">2</div>
+					<div class="step__body">
+						<h3>在「颜色配置」页管理已选颜色</h3>
+						<p>确认后回到的是「颜色配置」页，这里能看到每个色号的名称和色值（如 <code>#ffff9b</code>）。右上角的 <strong>＋</strong> 继续加颜色；点滑块图标进入编辑态，可以删除不用的颜色、拖动三横线把手调整顺序；长按某一行还能改「色号名称」。改完点「保存配置」。</p>
+
+						<figure class="figure">
+							<div class="figure__stage figure__stage--pair">
+								<img src="img/color-config.png" alt="「颜色配置」页：列出「色号：A3」#ffff9b 和「色号：A7」#f28d51 两行，底部是「保存配置」按钮。">
+								<img src="img/color-config-edit.png" alt="「颜色配置」编辑态：每行左侧出现红色减号删除按钮，右侧出现拖拽排序手柄，右上角图标变成勾。">
+							</div>
+							<figcaption>左：已选 2 色；右：编辑态可删除与排序（实机截图）</figcaption>
+						</figure>
+
+						<div class="callout callout--info">
+							<div class="callout__title"><span class="callout__icon"><span>i</span></span>关于 221 个 MARD 色号</div>
+							<p>颜色来自 App 内置的 MARD 色卡，共 221 个固定色值，可以改「色号名称」，但<strong>不能自定义新颜色、也不能改色值</strong>，也没有带名字的预设配色方案。至少选 1 种，否则点「创建画布」会提示「至少选择一种颜色」。</p>
+						</div>
+					</div>
+				</li>
+
+				<li class="step">
+					<div class="step__marker" aria-hidden="true">3</div>
+					<div class="step__body">
+						<h3>回到「新画布」页确认</h3>
+						<p>「颜色集」这一行会显示已选颜色的小色块（最多显示 5 个，再多会显示 <code>+N</code>），说明这张画的调色板已经就位。</p>
+						<div class="callout callout--tip">
+							<div class="callout__title"><span class="callout__icon"><span>✓</span></span>以后想换颜色怎么办</div>
+							<p>不用重画。进入绘画页后点右上「⋯ → 颜色配置」，打开的就是<strong>同一个页面、同一套色号</strong>，加色、删色、排序都一样，保存后立即生效。见<a href="draw.html#colors">绘画教程 · 配置颜色</a>。</p>
+						</div>
+					</div>
+				</li>
+			</ol>
+		</section>
+
+		<!-- ================================================ 04 导入图片 -->
+		<section class="section" id="import" aria-labelledby="import-title">
+			<div class="section__head">
+				<span class="section__kicker">04 / 导入图片</span>
+				<h2 id="import-title">让照片直接变成像素底稿</h2>
+			</div>
+			<p class="section__intro">这一步是可选的。App 会<strong>按你刚选的尺寸和颜色</strong>，把照片重绘成一格一格的像素画；生成后仍然可以拿画笔继续改。</p>
+
+			<ol class="steps">
+				<li class="step">
+					<div class="step__marker" aria-hidden="true">1</div>
+					<div class="step__body">
+						<h3>点「导入图片」，选一张照片或现拍</h3>
+						<p>会打开系统照片选择器，从相册里挑一张，也可以当场用相机拍。选完进入<strong>正方形裁剪</strong>：比例锁定，能双指缩放、拖动调整构图，确认后回到创建页。</p>
+
+						<figure class="figure">
+							<div class="figure__stage">
+								<img src="img/photo-picker.png" alt="系统照片选择器：网格状排列的最近照片缩略图，左上角返回，右上角取消。">
+							</div>
+							<figcaption>从相册选图（实机截图）</figcaption>
+						</figure>
+					</div>
+				</li>
+
+				<li class="step">
+					<div class="step__marker" aria-hidden="true">2</div>
+					<div class="step__body">
+						<h3>确认三行设置，点「创建画布」</h3>
+						<p>此时创建页上尺寸、颜色集色块、导入图片缩略图三项都齐了。点底部「创建画布」，App 会立刻把照片转成像素格并打开绘画页。</p>
+
+						<figure class="figure">
+							<div class="figure__stage">
+								<img src="img/new-canvas-ready.png"
+									alt="「新画布」页配置完成：画布尺寸 64×64，颜色集显示两个已选色块，导入图片显示山景照片缩略图，底部是「创建画布」。">
+							</div>
+							<figcaption>配置完成态：尺寸、颜色集、导入图片都已选好（实机截图）</figcaption>
+						</figure>
+					</div>
+				</li>
+			</ol>
+
+			<div class="flow flow--spaced">
+				<div class="flow__item">
+					<span class="flow__num">01 / 缩放</span>
+					<h3>缩到画布大小</h3>
+					<p>照片按所选尺寸做最近邻缩放，例如 64×64 就是 64 × 64 个格子，每格对应一个像素。</p>
+				</div>
+				<div class="flow__item">
+					<span class="flow__num">02 / 抖动</span>
+					<h3>保留明暗层次</h3>
+					<p>用 Atkinson 抖动处理渐变和阴影，让颜色种类不多时也能看出轮廓。</p>
+				</div>
+				<div class="flow__item">
+					<span class="flow__num">03 / 映射</span>
+					<h3>换成你选的色号</h3>
+					<p>每一格取颜色最接近的已选色号填色，所以整张画只会用到你选中的那几种颜色。</p>
+				</div>
+			</div>
+
+			<div class="callout callout--note">
+				<div class="callout__title"><span class="callout__icon"><span>!</span></span>想要更像原图？</div>
+				<p>多选几种颜色、把尺寸调大，细节会明显变多。改了尺寸或颜色集后，转换结果也会跟着变。<strong>不支持自动抠图 / 去背景</strong>，照片里不想要的部分，进绘画页用橡皮擦抹掉即可。</p>
+			</div>
+
+			<div class="card card--spaced">
+				<p class="card__title">创建之后会发生什么</p>
+				<ul class="checklist__list">
+					<li><div><strong>直接打开绘画页</strong><span>导入得到的像素画已经铺在画布上，画笔、橡皮、取色、撤销都能接着用。</span></div></li>
+					<li><div><strong>画板同时出现在首页</strong><span>以缩略图形式排在列表最前，画布没有名字，也不用手动「保存」。</span></div></li>
+					<li><div><strong>编辑自动保存</strong><span>之后落笔、撤销、移动画布等操作都会自动写入，退出再进来还在。</span></div></li>
+				</ul>
+			</div>
+		</section>
+
+		<!-- ================================================ 05 常见问题 -->
+		<section class="section" id="faq" aria-labelledby="faq-title">
+			<div class="section__head">
+				<span class="section__kicker">05 / 常见问题</span>
+				<h2 id="faq-title">创建时卡住了？看这里</h2>
+			</div>
+
+			<div class="faq">
+				<details>
+					<summary>能不选颜色、也不导入图片吗？</summary>
+					<div class="faq__answer">
+						<p>图片完全可以跳过，会得到一张空白画布。但<strong>颜色至少选 1 种</strong>，否则点「创建画布」会弹出「至少选择一种颜色」。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>尺寸选错了能改吗？能自己输入一个尺寸吗？</summary>
+					<div class="faq__answer">
+						<p>目前只能从 13 种预设里挑，没有自定义输入；创建后也没有修改尺寸的入口。尺寸不满意的话，重新新建一张画布，把旧画板在首页「编辑」里删掉即可。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>导入后颜色跟照片差很多</summary>
+					<div class="faq__answer">
+						<p>这是正常的：App 只能用<strong>你选中的那几种色号</strong>来还原照片。回到「颜色集」多加几种接近照片的颜色（例如深浅不同的黄、灰、肤色），或把画布尺寸调大，效果会更接近。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>导入的图片还能继续编辑吗？</summary>
+					<div class="faq__answer">
+						<p>能。导入只是生成初始像素，进绘画页之后和普通画布没有区别，可以落笔改色、橡皮擦除、取色、撤销重做，也能再导出。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>颜色选少了 / 选多了，之后能调整吗？</summary>
+					<div class="faq__answer">
+						<p>能，在绘画页右上「⋯ → 颜色配置」里增删和排序，和创建时是同一套页面。注意它换的是调色板，<strong>已经画上去的像素不会自动变色</strong>。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>新建的画布叫什么？要不要手动保存？</summary>
+					<div class="faq__answer">
+						<p>画布没有名称，首页用缩略图区分。点「创建画布」的那一刻就已入库，之后每次落笔、撤销、移动画布都会自动保存，直接返回首页即可。</p>
+					</div>
+				</details>
+			</div>
+		</section>
+
+		<!-- ==================================================== 收尾 -->
+		<section class="ending" aria-label="小结">
+			<div class="ending__card">
+				<h2>画布已经铺好了</h2>
+				<p>尺寸定大小 → 颜色定调色板 → 图片打底稿。<br>接下来，去<a href="draw.html">绘画教程</a>认识画笔和工具栏吧。</p>
+			</div>
+		</section>
+	</main>
+
+	<nav class="tutorial-nav" aria-label="其他使用教程">
+		<div class="tutorial-nav__inner">
+			<p class="tutorial-nav__label">PIXELO 使用教程</p>
+			<div class="tutorial-nav__links">
+				<a class="is-current" href="create.html" aria-current="page">创建画布</a>
+				<a href="draw.html">绘画</a>
+				<a href="export.html">导出图片</a>
+				<a href="connect.html">联网绘画</a>
+			</div>
+		</div>
+	</nav>
+
+	<footer class="footer">
+		<p>Pixelo · 创建画布使用教程 · 2026 年 11 月</p>
+		<p>适用 iOS 版 · <a href="#top">回到顶部</a></p>
+	</footer>
+
+</body>
+</html>

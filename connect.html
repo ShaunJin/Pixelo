@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+	<meta name="color-scheme" content="light">
+	<meta name="description" content="Pixelo 联网绘画使用教程：两台设备连接同一 Wi-Fi，即可在同一张像素画布上实时协作。">
+	<title>联网绘画 · 使用教程 | Pixelo</title>
+	<link rel="stylesheet" href="css/tech.css">
+</head>
+<body id="top">
+
+	<!-- 像素图案：全页复用，无需外部图片 -->
+	<svg class="svg-sprite" aria-hidden="true" focusable="false">
+		<symbol id="px-heart" viewBox="0 0 8 6">
+			<g fill="currentColor">
+				<rect x="1" y="0" width="2" height="1"/>
+				<rect x="5" y="0" width="2" height="1"/>
+				<rect x="0" y="1" width="8" height="1"/>
+				<rect x="0" y="2" width="8" height="1"/>
+				<rect x="1" y="3" width="6" height="1"/>
+				<rect x="2" y="4" width="4" height="1"/>
+				<rect x="3" y="5" width="2" height="1"/>
+				<rect x="1" y="1" width="1" height="1" opacity=".45"/>
+				<rect x="2" y="1" width="1" height="1" opacity=".45"/>
+			</g>
+		</symbol>
+	</svg>
+
+	<a class="skip-link" href="#main">跳到正文</a>
+
+	<header class="topbar">
+		<div class="topbar__inner">
+			<span class="topbar__brand"><span class="topbar__mark" aria-hidden="true"></span>Pixelo<span class="topbar__brand-sub"> · 使用教程</span></span>
+			<nav class="topbar__nav" aria-label="页面目录">
+				<a href="#prepare">准备</a>
+				<a href="#roles">两台设备</a>
+				<a href="#steps">操作步骤</a>
+				<a href="#how">原理</a>
+				<a href="#faq">常见问题</a>
+			</nav>
+		</div>
+	</header>
+
+	<main id="main">
+
+		<!-- ==================================================== Hero -->
+		<section class="hero" aria-labelledby="page-title">
+			<div class="hero__inner">
+				<p class="hero__eyebrow">PIXELO · 使用教程</p>
+				<h1 id="page-title">联网绘画</h1>
+				<p class="hero__lead">两台设备连到同一个 Wi-Fi，就能在同一张像素画布上一起画。你落下的每一格，对方都会立刻看到。</p>
+				<ul class="hero__chips">
+					<li>同一 Wi-Fi</li>
+					<li>实时同步</li>
+					<li>无需账号</li>
+					<li>无需互联网</li>
+				</ul>
+				<div class="hero__art" aria-hidden="true"><svg viewBox="0 0 8 6"><use href="#px-heart"/></svg></div>
+			</div>
+		</section>
+
+		<!-- ================================================ 01 开始之前 -->
+		<section class="section" id="prepare" aria-labelledby="prepare-title">
+			<div class="section__head">
+				<span class="section__kicker">01 / 准备</span>
+				<h2 id="prepare-title">开始之前</h2>
+			</div>
+			<div class="card">
+				<ul class="checklist__list">
+					<li>
+						<div>
+							<strong>两台设备都装上 Pixelo，并各自在前台打开</strong>
+							<span>一台负责「发起」，一台负责「加入」，两台都要保持 App 处于打开状态。</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<strong>连接同一个无线局域网</strong>
+							<span>建议连同一个家用路由器。个人热点、访客网络、公司或校园网常会隔离设备，导致互相发现不到。</span>
+						</div>
+					</li>
+					<li>
+						<div>
+							<strong>允许「本地网络」权限</strong>
+							<span>首次使用联网功能时，iOS 会弹出本地网络授权请求，请选择「允许」；否则 App 无法发现附近的设备。</span>
+						</div>
+					</li>
+				</ul>
+				<div class="callout callout--info">
+					<div class="callout__title"><span class="callout__icon"><span>i</span></span>关于隐私</div>
+					<p>全程不需要互联网，也不需要登录账号。你的画作只在两台设备之间直接传输，不会上传到任何服务器。</p>
+				</div>
+			</div>
+		</section>
+
+		<!-- ================================================ 02 角色说明 -->
+		<section class="section" id="roles" aria-labelledby="roles-title">
+			<div class="section__head">
+				<span class="section__kicker">02 / 两台设备</span>
+				<h2 id="roles-title">先分清谁做什么</h2>
+			</div>
+			<p class="section__intro">最容易卡住的地方，是两台设备都去「搜索」。请记住：<strong>只有一台负责广播，另一台负责连接</strong>。</p>
+
+			<div class="roles">
+				<article class="role role--host">
+					<span class="role__tag">主机 · 发起方</span>
+					<h3>打开画布，等人来连</h3>
+					<p>这张画布由它决定，伙伴打开的是它当前看到的同一张。</p>
+					<ul class="role__flow">
+						<li>先打开要一起画的那张画布</li>
+						<li>在画布里点「开启联网」</li>
+						<li>保持停留在画布页，等待对方</li>
+					</ul>
+				</article>
+				<article class="role role--guest">
+					<span class="role__tag">伙伴 · 加入方</span>
+					<h3>留在首页，去连主机</h3>
+					<p>不需要自己选画板，连接后会自动获得主机的画布。</p>
+					<ul class="role__flow">
+						<li>停留在画板列表首页</li>
+						<li>用「联网绘画」搜索附近的设备</li>
+						<li>点选主机，等画布自动打开</li>
+					</ul>
+				</article>
+			</div>
+
+			<div class="callout callout--tip">
+				<div class="callout__title"><span class="callout__icon"><span>✓</span></span>一句话记住</div>
+				<p>主机<strong>「开启联网」</strong>，伙伴<strong>「联网绘画」</strong>。不要两台都去搜索，也不要两台都去开广播。目前一次支持两台设备 1 对 1 协作。</p>
+			</div>
+		</section>
+
+		<!-- ================================================ 03 操作步骤 -->
+		<section class="section" id="steps" aria-labelledby="steps-title">
+			<div class="section__head">
+				<span class="section__kicker">03 / 操作步骤</span>
+				<h2 id="steps-title">四步开始一起画</h2>
+			</div>
+
+			<ol class="steps">
+				<!-- 步骤 1 -->
+				<li class="step">
+					<div class="step__marker" aria-hidden="true">1</div>
+					<div class="step__body">
+						<span class="step__who">主机</span>
+						<h3>在画布里点「开启联网」</h3>
+						<p>打开要一起画的那张画布，点右上角的「⋯」，在弹出菜单里选择「开启联网」。此时 App 就开始在局域网里广播自己，等设备连进来。</p>
+
+						<figure class="figure">
+							<div class="figure__stage">
+								<div class="mock" aria-hidden="true">
+									<div class="mock__status"><span>9:41</span><span>▮▮ ◔</span></div>
+									<div class="mock__nav"><span class="mock__navbtn">‹ 返回</span><span class="mock__navbtn">⋯</span></div>
+									<div class="mock__canvas"><svg class="px" viewBox="0 0 8 6"><use href="#px-heart"/></svg></div>
+									<div class="mock__toolbar">
+										<span class="mock__tool is-active">✎</span>
+										<span class="mock__tool">◇</span>
+										<span class="mock__tool">✥</span>
+										<span class="mock__tool">⌫</span>
+										<span class="mock__tool">↺</span>
+									</div>
+									<div class="mock__menu">
+										<span>颜色配置</span>
+										<span class="is-highlight">开启联网</span>
+										<span>隐藏网格</span>
+										<span>导出图片</span>
+										<span>导出图纸</span>
+									</div>
+								</div>
+							</div>
+							<figcaption>画布页右上角「⋯」→「开启联网」。黄色框为教程标注，App 内没有高亮效果。</figcaption>
+						</figure>
+
+						<div class="callout callout--note">
+							<div class="callout__title"><span class="callout__icon"><span>!</span></span>点完看不到变化是正常的</div>
+							<p>这一步不会弹出提示，界面也不会变。只要<strong>留在当前画布页</strong>，广播就已生效。中途退出画布会立即结束联网，需要重新开启。</p>
+						</div>
+					</div>
+				</li>
+
+				<!-- 步骤 2 -->
+				<li class="step">
+					<div class="step__marker" aria-hidden="true">2</div>
+					<div class="step__body">
+						<span class="step__who step__who--guest">伙伴</span>
+						<h3>在首页打开「联网绘画」</h3>
+						<p>回到画板列表首页，点右上角的「⋯」，选择「联网绘画」。屏幕中央会出现「附近的设备」弹窗，并开始自动搜索。</p>
+
+						<figure class="figure">
+							<div class="figure__stage">
+								<img src="img/Screenshot iPhone 18 Pro 2026-11-07 at 17.48.18.png"
+									alt="Pixelo 首页截图：右上角「⋯」菜单已展开，菜单内有「联网绘画」和「设置」两项；页面下方是「新建画布」按钮。">
+							</div>
+							<figcaption>首页右上角「⋯」菜单中的「联网绘画」（实机截图）</figcaption>
+						</figure>
+					</div>
+				</li>
+
+				<!-- 步骤 3 -->
+				<li class="step">
+					<div class="step__marker" aria-hidden="true">3</div>
+					<div class="step__body">
+						<span class="step__who step__who--guest">伙伴</span>
+						<h3>点选主机，等画布自动打开</h3>
+						<p>搜到设备后点一下，列表会显示「连接中…」。连接建立后，App 会自动取回主机的整张画布并直接打开，<strong>不需要再点任何确认</strong>。</p>
+
+						<figure class="figure">
+							<div class="figure__stage">
+								<div class="mock mock--devices" aria-hidden="true">
+									<div class="sheet">
+										<div class="sheet__head">
+											<div>
+												<strong>附近的设备</strong>
+												<small>确保两台设备处于同一局域网</small>
+											</div>
+											<span class="sheet__close">✕</span>
+										</div>
+										<div class="sheet__list">
+											<div class="device">
+												<span class="device__icon"></span>
+												<span class="device__text"><strong>小明的 iPhone</strong><small>连接中…</small></span>
+												<span class="spinner"></span>
+											</div>
+											<div class="device">
+												<span class="device__icon"></span>
+												<span class="device__text"><strong>Studio 的 iPad</strong><small>点击连接</small></span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<figcaption>「附近的设备」列表：点击设备后显示「连接中…」，同步完成即自动进入画布。</figcaption>
+						</figure>
+
+						<div class="callout callout--note">
+							<div class="callout__title"><span class="callout__icon"><span>!</span></span>认不出哪台是主机？</div>
+							<p>列表里显示的是对方的「本机名称」。到<strong>设置 → 本机名称</strong>改成好认的名字，下次开启联网时生效。</p>
+						</div>
+					</div>
+				</li>
+
+				<!-- 步骤 4 -->
+				<li class="step">
+					<div class="step__marker" aria-hidden="true">4</div>
+					<div class="step__body">
+						<span class="step__who step__who--both">双方</span>
+						<h3>一起画，改动实时同步</h3>
+						<p>现在两台设备看到的是同一张画布。任意一边落笔、撤销、重做等像素改动，都会立刻出现在另一边，可以边画边聊。</p>
+
+						<figure class="figure">
+							<div class="figure__stage figure__stage--soft">
+								<div class="sync-demo" aria-hidden="true">
+									<div class="sync-demo__phone">
+										<div class="sync-demo__label">主机</div>
+										<div class="sync-demo__grid"><svg class="px" viewBox="0 0 8 6"><use href="#px-heart"/></svg></div>
+									</div>
+									<div class="sync-demo__link">
+										<div class="sync-demo__track">
+											<span class="sync-demo__dot"></span>
+											<span class="sync-demo__dot sync-demo__dot--2"></span>
+										</div>
+										<span>实时同步</span>
+									</div>
+									<div class="sync-demo__phone sync-demo__phone--guest">
+										<div class="sync-demo__label">伙伴</div>
+										<div class="sync-demo__grid"><svg class="px" viewBox="0 0 8 6"><use href="#px-heart"/></svg></div>
+									</div>
+								</div>
+							</div>
+							<figcaption>两端始终显示同一张画布，像素改动双向即时同步。</figcaption>
+						</figure>
+
+						<div class="callout callout--tip">
+							<div class="callout__title"><span class="callout__icon"><span>✓</span></span>怎么结束 / 重新开始</div>
+							<p>关闭「附近的设备」弹窗<strong>不会</strong>断开已经建立的连接，只是停止继续搜索，可以放心关。任意一方<strong>退出画布</strong>才会结束本次协作，顶部会提示「连接已断开」。要再画一次，主机重新点「开启联网」，伙伴再连一次即可。</p>
+						</div>
+					</div>
+				</li>
+			</ol>
+		</section>
+
+		<!-- ================================================ 04 工作原理 -->
+		<section class="section" id="how" aria-labelledby="how-title">
+			<div class="section__head">
+				<span class="section__kicker">04 / 工作原理</span>
+				<h2 id="how-title">背后发生了什么</h2>
+			</div>
+			<p class="section__intro">不需要懂这些也能用，但了解流程后，遇到连不上的情况会更容易判断问题出在哪一步。</p>
+
+			<div class="flow">
+				<div class="flow__item">
+					<span class="flow__num">01 / 发现</span>
+					<h3>Bonjour 广播</h3>
+					<p>主机点「开启联网」后，会在局域网里广播服务 <code>_pixelo._tcp</code>；伙伴的「附近的设备」列表就是这么来的。</p>
+				</div>
+				<div class="flow__item">
+					<span class="flow__num">02 / 连接</span>
+					<h3>TCP 直连</h3>
+					<p>点选设备后，两台设备建立一条点对点 TCP 连接，默认使用端口 <code>8899</code>；端口被占用时会自动改用系统分配的端口。</p>
+				</div>
+				<div class="flow__item">
+					<span class="flow__num">03 / 同步</span>
+					<h3>先全量，后增量</h3>
+					<p>先完整传一次画布（尺寸、调色板、已有像素），之后只传发生变化的格子，所以画起来几乎感觉不到延迟。</p>
+				</div>
+			</div>
+
+			<div class="specs">
+				<dl>
+					<div><dt>服务类型</dt><dd>_pixelo._tcp</dd></div>
+					<div><dt>默认端口</dt><dd>8899</dd></div>
+					<div><dt>同步内容</dt><dd class="is-plain">像素改动（落笔 / 撤销 / 重做等）</dd></div>
+					<div><dt>协作人数</dt><dd class="is-plain">2 台设备，1 对 1</dd></div>
+					<div><dt>设备名</dt><dd class="is-plain">设置 → 本机名称</dd></div>
+					<div><dt>网络要求</dt><dd class="is-plain">同一局域网，无需互联网</dd></div>
+				</dl>
+			</div>
+		</section>
+
+		<!-- ================================================ 05 常见问题 -->
+		<section class="section" id="faq" aria-labelledby="faq-title">
+			<div class="section__head">
+				<span class="section__kicker">05 / 常见问题</span>
+				<h2 id="faq-title">连不上？先看这里</h2>
+			</div>
+
+			<div class="faq">
+				<details>
+					<summary>一直显示「正在搜索设备…」，列表是空的</summary>
+					<div class="faq__answer">
+						<p>按顺序检查：</p>
+						<ul>
+							<li>主机是否已经打开画布并点过「开启联网」，而且<strong>还停留在画布页</strong>（退出画布会停止广播）。</li>
+							<li>两台设备是否连的是同一个 Wi-Fi；个人热点、访客网络、公司或校园网常会隔离设备。</li>
+							<li>到 iOS「设置 → 隐私与安全性 → 本地网络」确认 Pixelo 已允许。</li>
+							<li>关闭弹窗，重新点一次「联网绘画」，让它重新搜索。</li>
+						</ul>
+					</div>
+				</details>
+
+				<details>
+					<summary>点了设备，却一直停在「连接中…」</summary>
+					<div class="faq__answer">
+						<p>多半是主机侧已经不在广播状态：请确认主机没有退出画布、没有切到别的页面太久。连接失败时屏幕顶部会出现提示。</p>
+						<p>部分路由器开启了「AP 隔离 / 客户端隔离」，会阻止设备互相连接，换一个普通网络再试。仍不行就两端都退出画布，按步骤 1–3 重来一遍。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>连上了，但画布没有自动打开</summary>
+					<div class="faq__answer">
+						<p>连接成功后 App 会先请求并接收整张画布，画布较大时可能需要稍等片刻。请确认主机仍停留在那张画布页，没有中途切走或退出。</p>
+						<p>若一直没有反应，让主机重新点一次「开启联网」，伙伴再连接一次。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>我画了，对方却看不到变化</summary>
+					<div class="faq__answer">
+						<p>先看有没有出现「连接已断开」的提示：断开后改动不会再同步，需要重新建立连接。任意一方退出画布都会结束本次协作。</p>
+						<p>只关闭「附近的设备」弹窗不会中断同步，那只是停止搜索，不必担心。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>列表里认不出哪台是自己的设备</summary>
+					<div class="faq__answer">
+						<p>列表显示的是对方的「本机名称」，默认取系统设备名。到首页「⋯ → 设置 → 本机名称」改成容易辨认的名字，下次开启联网时就会用新名字广播。</p>
+					</div>
+				</details>
+
+				<details>
+					<summary>要联网、要登录吗？能三个人一起画吗？</summary>
+					<div class="faq__answer">
+						<p>不需要互联网，也不需要账号，画作不会上传服务器，只在同一局域网的两台设备间直接传输。</p>
+						<p>当前版本一次只支持两台设备 1 对 1 协作，第三台设备发起的连接会被忽略。</p>
+					</div>
+				</details>
+			</div>
+		</section>
+
+		<!-- ==================================================== 收尾 -->
+		<section class="ending" aria-label="小结">
+			<div class="ending__card">
+				<h2>准备好就试试吧</h2>
+				<p>主机开广播 → 伙伴去连接 → 剩下的交给 App。<br>还没配置好？<a href="#prepare">回到准备清单再核对一遍</a>。</p>
+			<p class="ending__more">更多教程：<a href="create.html">创建画布</a> · <a href="draw.html">绘画</a> · <a href="export.html">导出图片</a></p>
+			</div>
+		</section>
+	</main>
+
+	<nav class="tutorial-nav" aria-label="其他使用教程">
+		<div class="tutorial-nav__inner">
+			<p class="tutorial-nav__label">PIXELO 使用教程</p>
+			<div class="tutorial-nav__links">
+				<a href="create.html">创建画布</a>
+				<a href="draw.html">绘画</a>
+				<a href="export.html">导出图片</a>
+				<a class="is-current" href="connect.html" aria-current="page">联网绘画</a>
+			</div>
+		</div>
+	</nav>
+
+	<footer class="footer">
+		<p>Pixelo · 联网绘画使用教程 · 2026 年 11 月</p>
+		<p>适用 iOS 版含联网绘画功能的版本 · <a href="#top">回到顶部</a></p>
+	</footer>
+
+</body>
+</html>
